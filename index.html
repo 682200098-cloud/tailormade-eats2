@@ -78,6 +78,7 @@
             <button id="nav-lobby" class="active" onclick="switchPage('lobby')">Lobby</button>
             <button id="nav-concept" onclick="switchPage('concept')">Concept</button>
             <button id="nav-question" onclick="switchPage('question')">Question</button>
+            <button id="nav-minigame" onclick="openMiniGame()">มินิเกม 🎮</button>
         </div>
     </nav>
 
@@ -163,6 +164,19 @@
     </div>
 
     <script>
+        // ==============================================================
+        // 🎮 ตั้งค่า URL มินิเกมตรงนี้ (เมื่อมีลิงก์แล้วให้นำมาวางแทน '')
+        // ==============================================================
+        const miniGameURL = 'https://682200098-cloud.github.io/game-design-by-Nutthawat/'; // เช่น 'https://your-game-website.com' หรือ 'minigame.html'
+
+        function openMiniGame() {
+            if (miniGameURL && miniGameURL.trim() !== '') {
+                window.open(miniGameURL, '_blank'); // เปิดมินิเกมในแท็บใหม่
+            } else {
+                alert('🎮 มินิเกมกำลังอยู่ระหว่างการพัฒนา จะเปิดให้เล่นเร็วๆ นี้!');
+            }
+        }
+        
         const menuData = [
             {
                 category: "ผัดกะเพรา (Basil Stir-fry)",
